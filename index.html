@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>음주운전을 하지말자!!</title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800&display=swap" rel="stylesheet">
+		<style>
+			body{ background: #ebf7f0; font-family: 'Nanum Myeongjo', serif; font-weight: 400; text-align: center;}
+			header{ width: 900px; margin: auto;  margin-bottom: 50px;}
+			section{ width: 900px; margin: auto;}
+			#a{width: 500px; background: white; margin: 50px; text-align: left; padding: 10px;}
+			#headerimg{height: 200px;}
+			#headerimg img{width:25%;transition: 1.3s;}
+			#headerimg img:hover{transform: rotateY(180deg);}
+			input{font-size: 20px;
+					padding: 10px; margin: 3px;}
+			button{margin-top: 13px; margin-left: 50px; background-color: #abc6b6; border: none;}
+			#alcheck{font-size: 20px;
+					padding: 10px; width:380px; height:46px;}
+			#monitor{font-size: 25px; font-weight: 700;
+					padding-left: 50px; padding-bottom: 20px; padding-top: 25px;}
+			h1,h3,#monitor{font-family: 'Nanum Myeongjo', serif; font-weight: 700;}
+			h1{font-size: 30px; padding-left: 10px;}
+			h2{font-size: 20px; padding-left: 10px; padding-top: 10px;}
+			h3{font-size: 15px; line-height:25px; padding-left: 10px; padding-bottom: 10px; font-weight: 700; color: red;}
+			h4{font-size: 20px; padding-left: 50px; padding-right:50px; padding-top: 10px; line-height:30px;}
+		</style>
+</head>
+<body>
+	<header>
+		<br>
+		<div id="headerimg">
+			<center><img src="./img/drink3.png"></center>
+		</div>
+		<h1> 혈중알코올농도를 알려주께 <br>
+			그니까 <u>음주운전 절대금지!!</u></h1>
+	</header>
+	
+	<section>
+		<center><div id="a">
+
+			<h2>알아야할 것!</h2>
+			<h3>주류의 알코올농도(%), 마신량(ml), 몸무게(kg)</h3>
+
+	<h2>계산식은</h2>
+	<h3>혈중알코올농도 <br>= { 주류의 알코올농도(%) * 마신량(ml) * 0.8} / {0.6 * 체중(kg) * 1000 }</h3>
+		</div>
+		</center>
+	</section>
+
+
+	<section>
+		<center><div id="a">
+			<h1>&nbsp&nbsp&nbsp&nbsp이제 계산해볼까나아~</h1>
+			<h4>알코올 농도 : <input type="text" placeholder="주류의 알코올 농도 (%) " id="mycon"> (%)</h4>
+			<h4>마신량 : <input type="text" placeholder="마신량 (ml) " id="mydrink"> (ml)</h4>
+			<h4>몸무게 : <input type="text" placeholder="몸무게 (kg) " id="myweight"> (kg)</h4>
+	<button id="alcheck">계산해줩</button>
+	<div id="monitor"> </div>
+		</div>	
+		</center>
+	</section>
+
+	<section>
+		<center><div id="a">
+			<h4>2019년 6월 25일 부터<br>
+				도로교통법 기준이 강화되어<br><br>
+				혈중알콜농도 <font color=red>0.03%~0.08%<br>
+				<u>벌점 100점, 면허정지 100일</u></font><br><br>
+
+				혈중알콜농도 <font color=red>0.08% 이상<br>
+				<u>운전면허 취소</u></font> 처분이 내려지게 됩니다.<br>
+				
+			</h4>
+			
+		</div>
+			
+		</center>
+	</section>
+	
+
+	<script>
+		alcheck.onclick = function (){
+			var bloodac = (mycon.value * mydrink.value * 0.8) / (0.6 * myweight.value * 1000) ;
+			monitor.innerHTML = "혈중알콜농도는 '" + (bloodac) + "%' 라구! <br>적당히 마셔!!";
+		}
+
+		
+	</script>
+
+
+
+
+</body>
+</html>
